@@ -51,69 +51,79 @@ body {
 }
 
 /*------------------------- HERO ----------------*/
-.head-vid{ 
- background: transparent;
-position: absolute;
-width: 100%;
-
+.head-vid {
+  position: absolute;
+  inset: 0;              
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
 }
+
+.head-vid video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     
+  object-position: center;
+}
+
+/* Hero Section */
 .hero {
-   
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    z-index: 100;
-
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 100;
 }
 
+/* Overlay */
 .hero::after {
-    content:"";
-    position:absolute;
-    width:100%;
-    height:100%;
-     top:0%;
-    left:0; 
-    background: rgba(0,0,0,0.5);
-    background: transparent;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5); 
+  z-index: 0;
 }
 
-.hero h2, .hero p, .hero .btn {
-    position: relative;
-    z-index:1;
-    
+.hero h2,
+.hero p,
+.hero .btn {
+  position: relative;
+  z-index: 1; 
 }
 
 .hero h2 {
-    font-size: 48px;
-    margin-bottom: 15px;
+  font-size: 48px;
+  margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 20px;
-    margin-bottom: 20px;
-    max-width: 700px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  max-width: 700px;
 }
 
 /* BUTTON */
 .btn {
-    background: linear-gradient(45deg,#10b981,#06b6d4);
-    color:#fff;
-    text-decoration:none;
-    padding: 12px 25px;
-    border-radius: 25px;
-    font-weight:bold;
-    transition: all 0.4s ease;
+  background: linear-gradient(45deg,#10b981,#06b6d4);
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.4s ease;
 }
 
 .btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
-
 /* SECTIONS */
 .section {
     padding: 80px 20px;
@@ -127,6 +137,7 @@ width: 100%;
     font-size: 36px;
     margin-bottom: 30px;
     position: relative;
+    
 }
 
 .section h2::after {
@@ -151,7 +162,7 @@ width: 100%;
     width: 300px;
     background:#1f1f2e;
     border-radius:15px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.5);
+    box-shadow:0 8px 25px rgb(0, 0, 0);
     padding:20px;
     text-align:center;
     transition: all 0.5s ease;
@@ -166,7 +177,7 @@ width: 100%;
 
 .card:hover {
     transform: translateY(-10px) scale(1.05);
-    box-shadow:0 15px 35px rgba(0,0,0,0.7);
+    box-shadow:0 15px 35px rgb(10, 34, 152);
 }
 
 .card:hover img {
@@ -248,11 +259,11 @@ footer {
 }
 
 /* FIXED FORM RESPONSIVENESS */
-@media (max-width:768px) {
+/* @media (max-width:768px) {
     .contact-form {
         width: 90%;
     }
-}
+} */
 /* ===== MOBILE NAV FIX ===== */
 
 #menu-toggle {
