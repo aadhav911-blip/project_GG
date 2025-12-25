@@ -154,7 +154,7 @@ body {
 .cards {
     display:flex;
     flex-wrap:wrap;
-    gap:30px;
+    gap:50px;
     justify-content:center;
     /* align-items: center; */
 }
@@ -193,12 +193,12 @@ body {
 }
 
 .src-card:hover img,.card:hover img {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 /* GREEN BACKGROUND SECTION */
 .green-bg {
-    background: linear-gradient(to right, #10b981, #065f46);
+    background: linear-gradient(to top left, #10b981 20% , #044b37 );
     border-radius: 15px;
     padding: 60px 20px;
     margin-top: 40px;
@@ -217,8 +217,21 @@ footer {
     font-size:16px;
     color:#fff;
 }
+/*----------------------------------------------------- video----------------------- */
+.vid-hover{
+    border-radius: none;
+    border: #000 solid;
+    padding: 0% ;
+}
+.vid-hover video{
+    height: 210px;
+    width: 320px;
+    border-radius: 20px;
+    /* background: none; */
+}
 
-/* --------------------------------------------------------------ANIMATIONS */
+
+/* --------------------------------------------------------------ANIMATIONS--------------------------- */
 .fade {animation:fadeIn 2s ease forwards;}
 .fade-up {animation:fadeUp 2s ease forwards; }
 .slide {animation:slideIn 1.5s ease forwards;}
