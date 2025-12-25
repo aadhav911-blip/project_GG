@@ -150,15 +150,25 @@ body {
     border-radius:2px;
 }
 
-/* CARDS */
+/* -----------------------------------------------------------------CARDS------------------------- */
 .cards {
     display:flex;
     flex-wrap:wrap;
     gap:30px;
     justify-content:center;
+    /* align-items: center; */
+}
+.src-box{
+    /* border: 20px solid; */
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    overflow-x: auto;
+    scrollbar-width: none;
+    gap: 50px;
+    
 }
 
-.card {
+.card , .src-card {
     width: 300px;
     background:#1f1f2e;
     border-radius:15px;
@@ -168,19 +178,21 @@ body {
     transition: all 0.5s ease;
 }
 
-.card img {
+.src-card img 
+,.card img {
     width:100%;
     border-radius:10px;
     margin-bottom:15px;
     transition: transform 0.5s ease;
 }
 
-.card:hover {
+.src-card:hover
+,.card:hover {
     transform: translateY(-10px) scale(1.05);
     box-shadow:0 15px 35px rgb(10, 34, 152);
 }
 
-.card:hover img {
+.src-card:hover img,.card:hover img {
     transform: scale(1.1);
 }
 
@@ -206,14 +218,28 @@ footer {
     color:#fff;
 }
 
-/* ANIMATIONS */
+/* --------------------------------------------------------------ANIMATIONS */
 .fade {animation:fadeIn 2s ease forwards;}
 .fade-up {animation:fadeUp 2s ease forwards; }
 .slide {animation:slideIn 1.5s ease forwards;}
+.src-card{ animation: src-cards 5s infinite linear; }
 
-@keyframes fadeIn {from{opacity:0;} to{opacity:1;}}
-@keyframes fadeUp {from{opacity:0; transform:translateY(50px);} to{opacity:1; transform:translateY(0);}}
-@keyframes slideIn {from{opacity:0; transform:translateX(-100px);} to{opacity:1; transform:translateX(0);}}
+@keyframes src-cards{
+    from{transform: translateX(0%);} 
+    to {transform: translatex(-100%);} 
+}
+@keyframes fadeIn {
+    from{opacity:0;} 
+    to{opacity:1;}
+}
+@keyframes fadeUp {
+    from{opacity:0; transform:translateY(50px);} 
+    to{opacity:1; transform:translateY(0);}
+}
+@keyframes slideIn {
+    from{opacity:0; transform:translateX(-100px);} 
+    to{opacity:1; transform:translateX(0);}
+}
 /* CONTACT FORM */
 .contact-form {
     display: flex;
