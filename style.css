@@ -186,6 +186,7 @@ body {
     transition: transform 0.5s ease;
 }
 
+.vid-hover video:hover,
 .src-card:hover
 ,.card:hover {
     transform: translateY(-10px) scale(1.05);
@@ -218,16 +219,17 @@ footer {
     color:#fff;
 }
 /*----------------------------------------------------- video----------------------- */
-.vid-hover{
-    border-radius: none;
-    border: #000 solid;
-    padding: 0% ;
+.vid-hover,.p{
+padding: 0% ;
+text-align: center;
+font-size: 20px;
+color: linear-gradient(to left,red,yellow);
 }
 .vid-hover video{
     height: 210px;
     width: 320px;
     border-radius: 20px;
-    /* background: none; */
+
 }
 
 
